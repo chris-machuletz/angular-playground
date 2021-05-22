@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-playground';
+  test: any;
+  constructor(store: AngularFirestore) {
+    this.test = store.collection('test').valueChanges({value: 'message'}) as Observable<any>;
+  }
 }

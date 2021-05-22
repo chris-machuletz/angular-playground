@@ -8,6 +8,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderModule } from './ui/components/header/header.module';
 import { MobileNavModule } from './ui/components/mobile-nav/mobile-nav.module';
 
+// Firebase
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from 'src/environments/environment';
+
+
 @NgModule({
   declarations: [
     AppComponent
@@ -16,6 +22,8 @@ import { MobileNavModule } from './ui/components/mobile-nav/mobile-nav.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
     HeaderModule,
     MobileNavModule,
   ],

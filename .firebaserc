@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "fusrr-b8dd1": {
+      "hosting": {
+        "angular-playground": [
+          "fusrr-b8dd1"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "fusrr-b8dd1"
+  }
+}
