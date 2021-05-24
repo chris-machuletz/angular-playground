@@ -3,11 +3,24 @@ nav {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #cdcdcd;
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  box-shadow: 0 0 16px transparentize($color: #000000, $amount: 0.9);
   a.nav-item {
-    padding: 24px;
+    padding: 8px 16px;
+    color: #000;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    svg {
+      width: 48px;
+    }
+    span {
+      font-size: 12px;
+    }
   }
 }
