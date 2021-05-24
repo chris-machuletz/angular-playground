@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-combine-widget',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CombineWidgetComponent implements OnInit {
 
-  constructor() { }
+  substanceCount: number | undefined;
+
+  constructor(private db: AngularFirestore) {
+    db.collection('substances').get().subscribe(next => {
+      this.substanceCount = next.size;
+    });
+  }
 
   ngOnInit(): void {
   }
