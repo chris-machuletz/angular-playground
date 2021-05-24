@@ -1,28 +1,31 @@
 .combine-widget {
-  background: #ffefd9;
   display: grid;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 5rem 0;
+  padding: calc(7rem + 54px) 0 7rem;
 }
 h2 {
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   font-size: 2rem;
+  font-weight: 700;
 }
 a.combine-ref {
-  background: #FFF;
+  background: #fff;
   color: #000;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
   text-align: center;
-  padding: 16px 24px;
+  padding: 24px 48px;
   border-radius: 24px;
   font-size: 1.25rem;
   text-decoration: none;
   transition: all 0.15s ease-in-out;
+  border: 1px solid #efefef;
+  box-shadow: 0;
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 0 16px transparentize($color: #000000, $amount: 0.8)
+    box-shadow: 0 0 16px transparentize($color: #000000, $amount: 0.9);
   }
 }
-
